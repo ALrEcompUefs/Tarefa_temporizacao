@@ -23,6 +23,7 @@ int main()
 {
     stdio_init_all();
     inicializar_leds();
+    inicializar_botoes();
     // ativa primeiro a led vermelha
     led_ativa = 'R';
     // configura interrupção para o botão A
@@ -94,9 +95,9 @@ void set_rgb(char cor){
         gpio_put(LED_B,1);
         break;
     case 'Y':
-        gpio_put(LED_R,0);
+        gpio_put(LED_R,1);
         gpio_put(LED_G,1);
-        gpio_put(LED_B,1);
+        gpio_put(LED_B,0);
         break;
     case '-':
         gpio_put(LED_R,0);
@@ -120,14 +121,15 @@ static void gpio_irq_handler(uint gpio, uint32_t events){
 |
 */
 bool repeating_timer_callback(struct repeating_timer *t) {
-    // Atualiza o proximo led a ficar aceso
+    // informa que três segundos se passaram
     printf("3 segundos passaram\n");
 
     //atualiza o estado da led rgb
+    // Dado o valor atual do led ele atualiza para proxima cor do semáforo
     switch (led_ativa)
     {
     case 'R':
-        set_rgb('Y');
+        led_ativa='Y';
         //led_ativa='B';
         set_rgb(led_ativa);
         break;

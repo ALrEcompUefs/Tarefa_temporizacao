@@ -144,6 +144,7 @@ static void gpio_irq_handler(uint gpio, uint32_t events){
     uint32_t tempo_atual = to_us_since_boot(get_absolute_time());
     // passando um intervalo de 200 ms o bounce estabiliza
     if(tempo_atual- tempo_anterior >  200000){
+        tempo_anterior= tempo_atual;
         if(gpio == BOTAO_A && !timer_ativo){
             // atualiza flag do temporizador
             ativar_timer = true;

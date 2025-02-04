@@ -9,7 +9,7 @@ const uint8_t LED_R=13, LED_G=11, LED_B= 12;
 // BOTÕES
 const uint8_t BOTAO_A=5;
 
-// variavies de controle da led
+// variaveis de controle da led
 static char led_ativa;
 
 // protótipos de funções

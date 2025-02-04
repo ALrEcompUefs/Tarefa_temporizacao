@@ -149,7 +149,7 @@ static void gpio_irq_handler(uint gpio, uint32_t events){
             // atualiza flag do temporizador
             ativar_timer = true;
         }
-        else{
+        else if(gpio == BOTAO_B){
             printf("Modo bootsel");
             reset_usb_boot(0,0);
         }

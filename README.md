@@ -126,9 +126,19 @@ if(tempo_atual- tempo_anterior >  200000){
 
 O botão A inícia a temporização dos leds e o botão B ativa o modo bootsel
 
-
 ## SIMULAÇÃO E EXECUCAÇÃO
 
 Para execução do projeto ele deve ser compilado utilzando o arquivo makefile disponível.
 
 Após compilação o projeto pode ser carrgado na placa bitdoglab e pode ser etstado via simulação utilzando a extensão do wokwi no Vs code. Para abrir a simulação basta abrir o arquivo diagram.json
+
+
+## VÍDEO DE DEMONSTRAÇÃO
+
+Atividade 1
+
+https://drive.google.com/file/d/1d878tApgN0t0wh9o7lWAYQMeRpiC-zkr/view?usp=sharing
+
+Atividade 2
+
+https://drive.google.com/file/d/1dSm6DT3YQeEtci9p0XSEPUrjxMEAVRPU/view?usp=sharing

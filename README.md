@@ -106,7 +106,7 @@ Definimos que o retorno padrão é a variável repetir com o valor padrão de 30
 
 Em cada chamada da função a variável contador é decrementada passando pelos valores 2,1,0 e ao chegar em 0 repetir é definido em 0 para não rearmar o alarme e a flag do temporizador ativo é liberada permitindo que outra execução seja feita.
 
-### Interrupção e debouncer 
+### Interrupção e debouncer
 
 Como solicitado foi implentado um debouncer para minimizar os efeitos de bounce do botão. O debouncer utiliza as funções de temporização para obter um intervalo de tempo que o botão ficou pressionado por tempo suficiente e assim liberar o tratamento da interrupção, no techo de codigo abaixo esta função é exemplificado.
 
@@ -125,11 +125,3 @@ if(tempo_atual- tempo_anterior >  200000){
 ```
 
 O botão A inícia a temporização dos leds e o botão B ativa o modo bootsel
-
-
-## VÍDEO DEMONSTRAÇÃO
-
-Vídeo demonstrando atividade 1 na placa bitdoglab
-
-
-Vídeo demonstrando atividade 2 na placa bitdoglab
